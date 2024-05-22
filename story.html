@@ -1,0 +1,227 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.28vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Pronouns</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;font-size: 18x;"> 
+             
+
+                    Did you go out to play last evening?  <br> <br>
+                    
+                   
+                    
+                    Suppose you played with your friend John, now can we say John is a noun? <br> <br>
+                    
+                 
+                    
+                    Yes, John is a noun because it is the name of a person. But what if I replace “John” with some other word? What will you write? <br> <br>
+                    
+                   
+                    
+                    Well, we can use “He” in place of John because John is a boy.  <br> <br>
+                    
+                     <span style="color: blueviolet;">For example:</span> <span style="color: blue;"> John is a good boy.</span> <br>
+                    We can also write it as <span style="color: blue;"> “He is a good boy.” </span> <br><br>
+                    
+                    We replaced <span style="color: darkblue;"> “John” </span> (Noun) with the word <span style="color: darkblue;"> “He” </span> (Pronoun). <br><br>
+
+
+                  
+
+
+
+
+
+                    
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+       
+        </div> 
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg",];
+            var para=[ " Pronouns are the words that we use in place of nouns. Same as when we used the word  <span style='color: blue;'> “he” </span> in place of <span style='color: blue;'>  “John”.</span><br> <br> Also, there are many types of pronouns and they are fun to learn. <br><br> Now, let’s read a story and try to learn more about pronouns.",
+
+                       "A boy named Raj was upset because he had done poorly on his English test. He was sitting in his room when his grandmother came and comforted him. His grandmother sat beside him and gave him a pencil. Raj looked at his grandma puzzled, and said he didn’t deserve a pencil after his performance on the test.",
+
+                      "<img src='3th.jpg' style='width: 100%;'' alt=''>",
+                      
+
+                      "Let’s put them in sentences:<br> <br>1. <span style='color: darkblue;'>She </span> loves reading books in <span style='font-weight: bolder;'> her </span> spare time. <br> 2. <span style='color: darkblue;'>We </span> are going to the park later today. <br> 3. <span style='color: darkblue;'>They</span> have a friendly dog named Buddy. <br> 4. <span style='color: darkblue;'>It</span> is raining heavily outside right now. <br> 5. <span style='color: darkblue;'>He</span> always tries his best in everything <span style='font-weight:bolder;'> he </span> does.",
+
+                      "Let us now look at the second sentence from the paragraph and try to identify more personal pronouns. <br> <br> <span style='color: blue;font-style:italic;'> “He was sitting in his room when his grandmother came and comforted him.” </span>  <br> <br>In this sentence, we used the word <span style='color: darkblue;font-style:italic'> “him”</span> which is used to represent <span style='color: darkblue;font-style:italic;'> “Raj”</span> who is a male person.<br> <br>And “him” is which type of pronoun?  <br> <span style='color:blueviolet;font-style:italic;'>“Him” </span> is a personal pronoun.",
+
+                      "For example:   <br><li>The book on the shelf is <span style='color: darkblue;'> mine.</span></li> <li>Your house is bigger than <span style='color: darkblue;'> mine.</span></li> <li>Austin says that the pencil case is  <span style='color: darkblue;'>his.</span></li>",
+
+                      "His grandma explained, “You can learn many things from this pencil because it is just like you. It experiences a painful sharpening, just the way you have experienced the pain of not doing well on your test. However, it will help you be a better student. Just as all the good that comes from the pencil is from within itself, you will also find the strength to overcome this hurdle.",
+
+                      " <img src='8th.jpg' style='width: 100%;'' alt=''>",
+ 
+
+                      "<img src='9th.jpg' style='width: 100%;'' alt=''>",
+
+                      "Let us see examples of reflexive pronouns in different sentences: <br><br> 1. I baked the cake <span style='color: darkblue;'> myself.</span> <br> 2. The kids entertained <span style='color: darkblue;'> themselves </span> with games. <br> 3. She bought <span style='color: darkblue;'> herself </span> a new dress for the party. <br> 4. We prepared the meals <span style='color: darkblue;'> ourselves </span> this time. <br> 5. The artist painted the portrait <span style='color: darkblue;'> himself.</span>",
+
+                      "And finally, just as this pencil will make its mark on any surface, you too shall leave your mark on anything you choose to. Raj was immediately consoled and promised himself that he would do better.",
+
+                      "In this sentence, you will get a variety of pronouns: <br> <br> <span style='font-weight:bolder;'>'This'</span> is a demonstrative pronoun pointing to the specific pencil.  <br> <span style='font-weight:bolder;'>'its'</span> is a possessive pronoun showing that the mark belongs to the pencil. <br> <span style='font-weight:bolder;'>'you'</span> is a personal pronoun referring to the person being spoken to. <br> <span style='font-weight:bolder;'>'your'</span> is also a possessive pronoun showing that the mark belongs to the person being spoken to.",
+                 
+                    
+
+                    ]
+            
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "The Tale of the Pencil";
+                    document.getElementById("story").innerHTML = " An interrogative phrase always ends with a question mark, and an interrogative pronoun often appears as the first word in the sentence. <br><br>A sentence that uses an interrogative pronoun to ask an indirect question may not end in a question mark. <br><br> <span style='color:blueviolet;'> For example: </span> He asked us <span style='color: darkblue;'> what </span> we wanted for dinner. <br><br>So, here we use the interrogative pronoun “what” but there was no question mark used at the end of the sentence.";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="The Tale of the Pencil"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Pronouns"
+                    document.getElementById("story").innerHTML = 'Did you go out to play last evening?  <br> <br> Suppose you played with your friend John, now can we say John is a noun? <br> <br> Yes, John is a noun because it is the name of a person. But what if I replace “John” with some other word? What will you write? <br> <br> Well, we can use “He” in place of John because John is a boy.  <br> <br> <span style="color: blueviolet;">For example:</span> <span style="color: blue;"> John is a good boy.</span> <br>  We can also write it as <span style="color: blue;"> “He is a good boy.” </span> <br><br> ';
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="The Tale of the Pencil"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
